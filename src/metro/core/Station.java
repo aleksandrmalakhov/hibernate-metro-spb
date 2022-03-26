@@ -1,9 +1,6 @@
 package metro.core;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.*;
@@ -11,8 +8,7 @@ import java.util.*;
 @Entity
 @Table(name = "metro_stations")
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class Station implements Comparable<Station> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
